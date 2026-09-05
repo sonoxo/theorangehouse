@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "orange-house"
+version = "0.1.0"
+description = "Privacy-first economic scenario projection layer for XUNIA"
+requires-python = ">=3.11"
+[project.scripts]
+orangehouse = "orangehouse.__main__:main"
+[tool.setuptools]
+packages = ["orangehouse"]
