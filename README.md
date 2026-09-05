@@ -6,17 +6,25 @@ This first functional projection models transparent treasury or resource scenari
 
 > Scenario output is educational planning data—not financial advice or a market forecast.
 
-## Launch
+## macOS: first launch in one paste
+
+Run this from any folder. It clones the repository if missing, updates it if present, enters the correct folder, and starts the API with the Python command macOS provides:
 
 ```bash
-python -m orangehouse serve
+cd "$HOME" && { test -d theorangehouse/.git && git -C theorangehouse pull --ff-only || git clone https://github.com/sonoxo/theorangehouse.git; } && cd theorangehouse && ./orangehouse.command serve
 ```
 
-Or run a projection directly:
+Then open [http://127.0.0.1:8080/health](http://127.0.0.1:8080/health). Stop the server with `Control-C`.
+
+## Run a projection
+
+From the repository folder:
 
 ```bash
-python -m orangehouse project 10000 --monthly-flow 500 --annual-rate 0.05 --volatility 0.15 --months 24
+./orangehouse.command project 10000 --monthly-flow 500 --annual-rate 0.05 --volatility 0.15 --months 24
 ```
+
+The launcher automatically chooses `python3` or `python` and refuses unsupported Python versions.
 
 ## API
 
@@ -53,8 +61,7 @@ flowchart TD
 ## Verify
 
 ```bash
-python -m unittest discover -s tests -v
-python -m compileall -q orangehouse
+./orangehouse.command test
 ```
 
 Historic Monero meta documents remain as upstream reference material. New components live under `orangehouse/`, `ontology/`, `tests/`, and `.github/workflows/`.
