@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "ecosystem_version": "4.0.0",
+  "repo": "sonoxo/theorangehouse",
+  "plane_id": "orange-house",
+  "role": "economic-scenario-planning",
+  "control_root": "sonoxo/gpt-doug-llm",
+  "execution_plane": "sonoxo/zyra",
+  "responsibilities": ["deterministic projections", "stress bands", "scenario analysis", "economic planning interfaces", "reproducible outputs"],
+  "collective_ai_layers": ["classical_ai", "machine_learning", "neural_networks", "deep_learning", "generative_ai", "agentic_ai"],
+  "authority_boundary": "Scenario analysis does not create trading, custody, wallet, transaction-signing or financial-advice authority."
+}
